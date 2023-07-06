@@ -7,6 +7,10 @@ module.exports = {
         cYellow: "#fcea0d",
         cBlack: "#1d1d1d",
       },
+      fontFamily: {
+        myriad: ["myriad-pro", "sans-serif"],
+        lato: ["lato", "sans-serif"],
+      },
     },
   },
   plugins: [],
