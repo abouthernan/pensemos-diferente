@@ -21,3 +21,13 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
+
+<style is:global>
+  @font-face {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: local("Lato Regular"), url("/fonts/Lato-Regular.woff2") format("woff2"),
+      url("/fonts/Lato-Regular.ttf") format("truetype");
+  }
+</style>
