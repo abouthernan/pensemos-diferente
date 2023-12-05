@@ -1,0 +1,50 @@
+---
+import Icon from '../icons/Icon.astro'
+import Logo from '../icons/Logo.astro'
+---
+
+<section class="bg-black py-24 grid place-items-center">
+    <article class="grid grid-cols-2 place-items-center max-w-6xl mx-auto w-full">
+    <a
+      href="#"
+      class="bg-cYellow max-w-[400px] w-full px-10 min-h-[555px] flex flex-col justify-center relative custom-shadow-top"
+    >
+      <header class="absolute top-0 left-0">
+        <Icon name="book" />
+      </header>
+
+      <h2 class="text-6xl font-bold italic">
+        País <span class="block">Posible</span>
+      </h2>
+
+      <p class="text-lg mt-1">· Libro Digital ·</p>
+    </a>
+
+    <a
+      href="#"
+      class="bg-cYellow max-w-[400px] w-full px-10 min-h-[555px] flex flex-col justify-center relative custom-shadow-bottom"
+    >
+      <header class="absolute top-0 left-0">
+        <Icon name="spotify" />
+      </header>
+
+      <img src="/logo-circle-black.svg" alt="puede ser una imagen del logo del podcast pensemos diferente" />
+
+      <p class="text-base mt-1">El podcast que desafía las convenciones y nos invita a explorar nuevas perspectivas.</p>
+    </a>
+  </article>
+</section>
+
+<style>
+  .custom-shadow-top {
+    -webkit-box-shadow: -30px -30px 0px 0px #fff;
+    -moz-box-shadow: -30px -30px 0px 0px #fff);
+    box-shadow: -30px -30px 0px 0px #fff;
+  }
+
+  .custom-shadow-bottom {
+    -webkit-box-shadow: 30px 30px 0px 0px #fff;
+    -moz-box-shadow: 30px 30px 0px 0px #fff;
+    box-shadow: 30px 30px 0px 0px #fff;
+  }
+</style>
