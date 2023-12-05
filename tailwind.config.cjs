@@ -7,8 +7,7 @@ module.exports = {
         cYellow: '#fcea33'
       },
       fontFamily: {
-        myriad: ['myriad-pro', 'sans-serif'],
-        lato: ['lato', 'sans-serif']
+        inter: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
       }
     }
   },
