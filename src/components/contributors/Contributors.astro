@@ -1,0 +1,18 @@
+---
+import ContributorsSlider from './ContributorsSlider.astro'
+import Button from '../Button.astro'
+---
+
+<section class="bg-cYellow pt-20 pb-10 grid place-items-center space-y-6">
+  <h2 class="text-center text-6xl font-extrabold italic">
+    Todos podemos hacerlo <span
+      class="relative after:absolute after:w-full after:h-2 after:bg-purple-600/50 after:bottom-4 after:left-1 z-10 after:-z-10"
+      >posible</span
+    >
+  </h2>
+  <ContributorsSlider />
+  <p class="text-center text-lg font-semibold italic pb-10">
+    Ell@s ya se unieron a esta iniciativa, tú tambien puedes hacerlo.
+  </p>
+  <Button href="#" align="center">Unirme a esta iniciativa</Button>
+</section>
