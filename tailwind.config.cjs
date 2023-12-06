@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cYellow: '#fcea33'
+        cYellow: '#fcea33',
+        cBlack: '#1c1c1b'
       },
       fontFamily: {
         inter: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
