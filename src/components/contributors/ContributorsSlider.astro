@@ -1,119 +1,109 @@
-<section class="sandbox__carousel max-w-7xl mx-auto px-10 relative pb-10">
-  <div class="embla emblaContributors">
-    <div class="embla__viewport">
-      <div class="embla__container cursor-grab">
-        <div class="embla__slide">
-          <header class="absolute top-0 left-0 pl-10">
-            <img
-              src="/user.svg"
-              alt="puede ser la imagen de un icono de un usuario"
-            />
-          </header>
-          <img
-            class="embla__slide__img"
-            src="https://s3-alpha-sig.figma.com/img/51f4/418d/9ca9acdc47b9e501aba0459629afef79?Expires=1702857600&Signature=mynCpxMu7k-hbZgXNX3rSaHt8L8aRdHOYbDBl~sGorOvof1gKDt1rAjA0OlylqEqX04QskRbqf6TcYLv6VB5pu-c8K3rppdFOCuORaFq16M~jnVPwX6RozT~RbhEJKp5Enyi-0YDBhiWKLPvS2xpeAkF63DNLe2tIqC4O9jMbfj758Wa37PnmBbuv7sqsJHjzBoOyYmn8ItPXewYjFGWwUgbS-fq7egqLphb5WL3ShiKtMm7AigpTYeaaSoyDDHH9rFp4FjTuMir54mLCNC1ocOI6gZiT2S3fL~eAC492gVyScmnR2A~jEDTD6XWnNiprueYU9WFMbP~lo~oXo7Zdg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            alt=""
-          />
-          <footer
-            class="absolute bottom-0 left-10 right-0 h-14 flex items-center justify-center"
-          >
-            <p class="text-center text-white font-bold">Humberto De La Calle</p>
-          </footer>
-        </div>
-        <div class="embla__slide">
-          <header class="absolute top-0 left-0 pl-10">
-            <img
-              src="/user.svg"
-              alt="puede ser la imagen de un icono de un usuario"
-            />
-          </header>
-          <img
-            class="embla__slide__img"
-            src="https://s3-alpha-sig.figma.com/img/214e/ba80/bbbb56eb7c421eb44c35417e6cd57093?Expires=1702857600&Signature=Vf0sB8z99q8jJYAQ68JLmiAYv8196fo~5LXjpT6GxoaP2N5U3~0cg9kTU3w9RrUuEsW769SVjzxjtKgSQ3XB8fWIK5mtfbkqD5qVkTgMnQA75yN9m2NtYfAr92hLLT7Kw2WYufGOsBjLtSRuxrR4U0i2HXnQSvAPSj0IougilMwlVp8t5Qp0qG2MUGIEgxjxLo7zoeya8oqMQ7C8RAI7x3q2lFrku8f3WQoSCXhK3zei~9I6cBXI2q1FvVQdWCXMtWHDI82-D51soD9gx0s7Y~gZdYg3PJMQAU9sTGs9a4cHcTtgMsrTVYxsBXAteykOpPyhER6ij9SSZEfTfD2nNA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            alt=""
-          />
-          <footer
-            class="absolute bottom-0 left-10 right-0 h-14 flex items-center justify-center"
-          >
-            <p class="text-center text-white font-bold">
-              Ernesto Rojas Morales
-            </p>
-          </footer>
-        </div>
-        <div class="embla__slide">
-          <header class="absolute top-0 left-0 pl-10">
-            <img
-              src="/user.svg"
-              alt="puede ser la imagen de un icono de un usuario"
-            />
-          </header>
-          <img
-            class="embla__slide__img"
-            src="https://s3-alpha-sig.figma.com/img/222e/ff85/00995c2c836b9d621e43d41174823e9f?Expires=1702857600&Signature=HfQFYIrtJbOZeOcDV2OKVPSuMSAubXPhCrU1JTIMCKm3cNc-5EFLHBzk7e8okglLCoDUzF7~Rp-9AL3daTakHPhBtpMoNhBeK0Ll7yiRM6hpudKWxyoLIP2L7vq3IdGdl7dfb9GAGsCjXxdYutNXBxFqC578~qbrdJoHXFLb2zl-EcMWI3nmH-UZNfcPvWKUNOrEqrA~01UeyueWGfs5eupN~LAfwO42brOfYW9tn0pl3qY2FzYnBUfxb~JStX~r4asxIicM6n-vrzPH~wOQasfn37tLQb8-TUeS5EYrBKoKhM4p5OXyZwhr5xY0bg7Zvy6D0UcVEh0V5tSuOQWf9Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            alt=""
-          />
-          <footer
-            class="absolute bottom-0 left-10 right-0 h-14 flex items-center justify-center"
-          >
-            <p class="text-center text-white font-bold">
-              Alberto Pardo Barrios
-            </p>
-          </footer>
-        </div>
-      </div>
-
-      <div
-        class="w-full flex justify-between items-center absolute top-[40%] z-10 left-0 right-0 px-2"
-      >
-        <button class="embla__prev text-7xl font-thin">&#8249;</button>
-        <button class="embla__next text-7xl font-thin relative">&#8250;</button>
-      </div>
-    </div>
+<section
+  class="sandbox__carousel max-w-7xl mx-auto p-10 relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+>
+  <div class="embla__slide">
+    <header class="absolute top-0 left-0">
+      <img
+        src="/user.svg"
+        alt="puede ser la imagen de un icono de un usuario"
+      />
+    </header>
+    <img
+      class="embla__slide__img"
+      src="https://s3-alpha-sig.figma.com/img/51f4/418d/9ca9acdc47b9e501aba0459629afef79?Expires=1704067200&Signature=hbx62iMzO8~v7yygELhj3KrfeoT2nvk~qg3ajN7TH0qG-PSQaZpBct8xgt-zkm8cPO10hy0fsfnCHxiLHUd4vt5NIlnOqAwvyrsJ1c1q5j8BdquAPzITqZ-Mt~s6eUFoAz2OXmSsbSmQX3Jceopq8uLuJ7xdctwg-i4FCy6KraTw5KoUg0afzp2FJ6nlGos1-bnlst00XjvCemi6TlTr-5RZ0Fe~5lpfrnzmVJe3CihIzmaY9Y97Il4eWq-ir2qTdmINU2BW~xmeEc3pSparTPyltwWLO-WLp9tTRNmIzbDjqXPkVnSQHESdrSiBIrqwtmsTK87eZnAjPJ5lxfrRjA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+      alt=""
+    />
+    <footer
+      class="absolute bottom-0 left-0 right-0 h-14 flex items-center justify-center"
+    >
+      <p class="text-center text-white font-bold">Humberto De La Calle</p>
+    </footer>
+  </div>
+  <div class="embla__slide">
+    <header class="absolute top-0 left-0">
+      <img
+        src="/user.svg"
+        alt="puede ser la imagen de un icono de un usuario"
+      />
+    </header>
+    <img
+      class="embla__slide__img"
+      src="https://s3-alpha-sig.figma.com/img/214e/ba80/bbbb56eb7c421eb44c35417e6cd57093?Expires=1704067200&Signature=jBH0h0uvTspA23dXGmfE0vMwCQ23F4TPBQ3OLLfRpYWkDM1sivZ00hyjkiSj-1pdzPp7Jx~QEzDhNOcYiqedk4hDp4WaHBZCMpCAuMsuPilFjChk6K6T3RvsiRwNRJJxFjDKi8DrGGolVNhHL~EnMSRFD207V6mCsTv4w-v5R2VYnOlGN9NizCo3GL0fy7Zj~ygAbyJ0q5Z93atcgNRfkHNABHv1j-u2dFH3o70WESBni4YcYDOSbzB1TXvjvhuooNbqlaKnGVGfzBVBdgsLTIrEwBeNlfGEh3HSXWwN59HGaQO98m~6dqycQxaZpAxVmPD5Gy5N2JIZOzQjXRhv-A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+      alt=""
+    />
+    <footer
+      class="absolute bottom-0 left-0 right-0 h-14 flex items-center justify-center"
+    >
+      <p class="text-center text-white font-bold">Ernesto Rojas Morales</p>
+    </footer>
+  </div>
+  <div class="embla__slide">
+    <header class="absolute top-0 left-0">
+      <img
+        src="/user.svg"
+        alt="puede ser la imagen de un icono de un usuario"
+      />
+    </header>
+    <img
+      class="embla__slide__img"
+      src="https://s3-alpha-sig.figma.com/img/222e/ff85/00995c2c836b9d621e43d41174823e9f?Expires=1704067200&Signature=Kju57wiomMPMW6OzEMcLP-XcTOOBqHFNEQuPCe4qVHy-LjqaQIwNmN3ms~dhO6bVye4drrgGnO4pDDu2HAc6ZB7NgHxMzQ0eHEFH~ARFAyfNDYgnQ-6sc9te3raR3JRai7OWDR3klK1jrOJ8N4i9zKZ6w~t84ks2y23ZLZCXS-~MpEdckB0OgHDH3OK7He1cWaopQjmk0fAAkbFP4t6xWOaXRpYp~B6j2kkTnRmm97k8jF2MonU4GMp2SBJr-HmE3r02C5FObwdsl50YnDQj35PFHlWSRQPKap5u3R4TLkK7Bowe6mOZLRmX7qqjRz~HtEOzXSjXAkPvrypJrh9Sgg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+      alt=""
+    />
+    <footer
+      class="absolute bottom-0 left-0 right-0 h-14 flex items-center justify-center"
+    >
+      <p class="text-center text-white font-bold">Alberto Pardo Barrios</p>
+    </footer>
+  </div>
+  <div class="embla__slide">
+    <header class="absolute top-0 left-0">
+      <img
+        src="/user.svg"
+        alt="puede ser la imagen de un icono de un usuario"
+      />
+    </header>
+    <img
+      class="embla__slide__img"
+      src="https://s3-alpha-sig.figma.com/img/ca29/dc9a/714d6bd5291dbc435b184d9b378ae64b?Expires=1704067200&Signature=bNWgJZVG4rwdo66cD8npurotaQKXxrDglfOP7nBj9W6dUp4EjAzNxEUP~DX-yZe8~y7pUPjHJH0YWP7XP3~PwdFCaulaiL6GzfOXDVchH54V0-a3RnRzjNHl-3c-LdzOVm~KSbnYnK6oiiMBz2qUjl7qnsada~Vh6k-nSiCQcLJZYYsHh6DCy~JIElCgAHk14StPvdkyyFNz4AN9KrkmffHYTaim1Eo87dMQLBlNzMnh3p3X6aq7QDaCMcgr5I-Kqa8yEekDDlu94~vXaqLNAm6SMSXGdQipLS6jfVUc1NS5xxbveytLjnTtZdo8UpU7ICsIMdtW4J~yWHWTvyJPDw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+      alt=""
+    />
+    <footer
+      class="absolute bottom-0 left-0 right-0 h-14 flex items-center justify-center"
+    >
+      <p class="text-center text-white font-bold">Laura Valencia de Armas</p>
+    </footer>
+  </div>
+  <div class="embla__slide">
+    <header class="absolute top-0 left-0">
+      <img
+        src="/user.svg"
+        alt="puede ser la imagen de un icono de un usuario"
+      />
+    </header>
+    <img
+      class="embla__slide__img"
+      src="https://s3-alpha-sig.figma.com/img/3388/0040/8b465b3260d82eb18489d977779a3bf9?Expires=1704067200&Signature=j6bZYZze0w-K8c9M-VLiKCNnf-mnuPmZR2CO93zi3EdvWNgPITnvSI6Lu2IyUeS-HW~bCT2a6IL1Bnedo2Hs049jpTUF~4Hf-K~3l1teeRwWI1jBZGkacttGzyIed70-KrSQo7ky4RVqMwaFlUe69kIKpo1ecAZmMpYzfU~A4gnzs6JSw3Bmte8qGxRxEgekHgqqCgv7SSnxIXgOXTwuSW6-5u8puRGm6PIkHci2ZJnfp2bFXt-xiMihU1KaUpSp2TNpWq9iIwnQ9J0kA-rDaUBw7F7yKV~ChG~DWicVT07Ap5SOMis-fOxNil-W4lKDI3BJn4H7XbOLDIgIW~s5zw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+      alt=""
+    />
+    <footer
+      class="absolute bottom-0 left-0 right-0 h-14 flex items-center justify-center"
+    >
+      <p class="text-center text-white font-bold">Hernán Estupiñán</p>
+    </footer>
   </div>
 </section>
 
 <style>
-  .embla {
-    --slide-spacing: 40px;
-    --slide-size: 33.33%;
-    --slide-height: 430px;
-    padding: 1.6rem;
-  }
-
-  @media (max-width: 768px) {
-    .embla {
-      --slide-size: 50%;
-      --slide-height: 25rem;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .embla {
-      --slide-size: 100%;
-      --slide-height: 25rem;
-      padding: 1rem;
-    }
-  }
-
-  .embla__viewport {
-    overflow: hidden;
-  }
-  .embla__container {
-    backface-visibility: hidden;
-    display: flex;
-    touch-action: pan-y;
-    margin-left: calc(var(--slide-spacing) * -1);
-  }
   .embla__slide {
-    flex: 0 0 var(--slide-size);
-    min-width: 0;
-    padding-left: var(--slide-spacing);
+    width: 100%;
+    max-width: 350px;
     position: relative;
   }
   .embla__slide__img {
     display: block;
     height: var(--slide-height);
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -121,19 +111,3 @@
     background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   }
 </style>
-
-<script>
-  import EmblaCarousel from 'embla-carousel'
-
-  const OPTIONS = { slidesToScroll: 'auto', containScroll: 'trimSnaps' }
-
-  const emblaNode = document.querySelector('.emblaContributors')
-  const viewportNode = emblaNode.querySelector('.embla__viewport')
-  const prevButtonNode = emblaNode.querySelector('.embla__prev')
-  const nextButtonNode = emblaNode.querySelector('.embla__next')
-
-  // @ts-ignore
-  const embla = EmblaCarousel(viewportNode, OPTIONS)
-  prevButtonNode.addEventListener('click', embla.scrollPrev, false)
-  nextButtonNode.addEventListener('click', embla.scrollNext, false)
-</script>

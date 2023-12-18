@@ -1,0 +1,94 @@
+---
+import { getCollection, CollectionEntry } from 'astro:content'
+import Layout from '@/layouts/Layout.astro'
+import Player from '@/components/Player.astro'
+
+interface Entry {
+  id: string
+  slug: string
+  body: string
+  collection: string
+  data: Data
+  render: string
+}
+
+interface Data {
+  title: string
+  image: string
+  slug: string
+  author: string
+  episodes: any[]
+}
+
+export async function getStaticPaths() {
+  const pensemosDiferente = await getCollection('pensemos-diferente')
+  return pensemosDiferente.map((entry: Entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }))
+}
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<Layout title={`${entry.data.title}`}>
+  <main class="bg-cBlack pb-10 px-2">
+    <a href="/books/pensemos-diferente" class="flex w-full justify-center">
+      <img
+        src="/logo-circle-black.svg"
+        alt="puede ser una imagen del logo de pensemos diferente"
+        class="invert max-w-xs w-full"
+      />
+    </a>
+
+    <section
+      class="flex flex-col items-center lg:flex-row gap-6 lg:gap-10 text-white justify-center lg:items-start max-w-6xl w-full mx-auto"
+    >
+      <div class="relative max-w-sm">
+        <header class="absolute top-0 left-0">
+          <img
+            src="/user.svg"
+            alt="puede ser la imagen de un icono de un usuario"
+          />
+        </header>
+        <img class="w-full lg:min-w-[384px]" src={entry.data.image} alt="" />
+        <footer
+          class="absolute bottom-0 left-0 right-0 h-14 flex items-center justify-center"
+        >
+          <p class="text-center text-white font-bold">{entry.data.title}</p>
+        </footer>
+      </div>
+
+      <article>
+        <h1
+          class="text-4xl md:text-6xl font-bold italic pb-4 text-center lg:text-left"
+        >
+          {entry.data.author}
+        </h1>
+        <p
+          class="text-base md:text-lg md:max-w-[55ch] md:mx-auto lg:max-w-full"
+        >
+          <Content />
+        </p>
+      </article>
+    </section>
+
+    <Player episodes={entry.data.episodes} />
+
+    <form class="w-full max-w-7xl mx-auto text-white">
+      <label for="message" class="block mb-2 text-lg font-bold italic"
+        >Déja tus comentarios...</label
+      >
+      <textarea
+        id="message"
+        rows="4"
+        class="block p-2.5 my-10 w-full rounded-lg bg-[#282828] border-gray-600 placeholder-gray-400 text-white"
+        placeholder="Escribe tu comentario aquí..."></textarea>
+
+      <button
+        class="bg-cYellow text-black py-2 px-4 rounded-full font-bold hover:bg-cYellow/80 transition-colors w-full md:max-w-max"
+        >Dejar comentario</button
+      >
+    </form>
+  </main>
+</Layout>

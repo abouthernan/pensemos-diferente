@@ -1,11 +1,14 @@
 ---
+import { getCollection } from 'astro:content'
 import Layout from '@/layouts/Layout.astro'
-import Player from '@/components/Player.astro'
+import Footer from '@/components/footer/Footer.astro'
+
+const pensemosDiferente = await getCollection('pensemos-diferente')
 ---
 
 <Layout title="Pensemos diferente - Podcast">
   <main class="bg-cBlack pb-10 px-2">
-    <a href="/" class="flex w-full justify-center">
+    <a href="/" class="flex w-full max-w-max mx-auto justify-center">
       <img
         src="/logo-circle-black.svg"
         alt="puede ser una imagen del logo de pensemos diferente"
@@ -13,66 +16,58 @@ import Player from '@/components/Player.astro'
       />
     </a>
 
-    <section
-      class="flex flex-col items-center lg:flex-row gap-6 lg:gap-10 text-white justify-center lg:items-start max-w-6xl w-full mx-auto"
+    <h1
+      class="text-4xl md:text-6xl w-full font-bold italic pb-4 text-white text-center"
     >
-      <div class="relative max-w-sm">
-        <header class="absolute top-0 left-0">
-          <img
-            src="/user.svg"
-            alt="puede ser la imagen de un icono de un usuario"
-          />
-        </header>
-        <img
-          class="w-full lg:min-w-[384px]"
-          src="https://s3-alpha-sig.figma.com/img/51f4/418d/9ca9acdc47b9e501aba0459629afef79?Expires=1702857600&Signature=mynCpxMu7k-hbZgXNX3rSaHt8L8aRdHOYbDBl~sGorOvof1gKDt1rAjA0OlylqEqX04QskRbqf6TcYLv6VB5pu-c8K3rppdFOCuORaFq16M~jnVPwX6RozT~RbhEJKp5Enyi-0YDBhiWKLPvS2xpeAkF63DNLe2tIqC4O9jMbfj758Wa37PnmBbuv7sqsJHjzBoOyYmn8ItPXewYjFGWwUgbS-fq7egqLphb5WL3ShiKtMm7AigpTYeaaSoyDDHH9rFp4FjTuMir54mLCNC1ocOI6gZiT2S3fL~eAC492gVyScmnR2A~jEDTD6XWnNiprueYU9WFMbP~lo~oXo7Zdg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-          alt=""
-        />
-        <footer
-          class="absolute bottom-0 left-0 right-0 h-14 flex items-center justify-center"
-        >
-          <p class="text-center text-white font-bold">Humberto De La Calle</p>
-        </footer>
-      </div>
+      Episodios
+    </h1>
 
-      <article>
-        <h1 class="text-4xl md:text-6xl font-bold italic pb-4 text-center lg:text-left">
-          Humberto <span class="block">De La Calle</span>
-        </h1>
-        <p class="text-base md:text-lg md:max-w-[55ch] md:mx-auto lg:max-w-full">
-          En esta charla se conversará en torno a la existencia de la
-          inscripción de cédulas convertido en uno de los principales
-          instrumentos del clientelismo político. Se emplea para vigilar el
-          cumplimiento del compromiso establecido entre ciudadanos necesitados
-          de ayuda y un candidato que les ofrece, dinero, empleo, becas u otros
-          privilegios conseguidos de la administración pública. El aparentemente
-          inocuo método de permitir que se trasladen electores a un lugar
-          distinto al de la vecindad de su residencia, centraliza en unas pocas
-          mesas la vigilancia de la votación de los clientes del político. ¿Es
-          posible eliminar esas prácticas? ¿Se podría utilizar la tecnología
-          para erradicar ese sistema corrupto? De eso dialogan nuestros
-          invitados.
-        </p>
-      </article>
-    </section>
-
-    <Player />
-
-    <form class="w-full max-w-7xl mx-auto text-white">
-      <label for="message" class="block mb-2 text-lg font-bold italic"
-        >Déja tus comentarios...</label
-      >
-      <textarea
-        id="message"
-        rows="4"
-        class="block p-2.5 my-10 w-full rounded-lg bg-[#282828] border-gray-600 placeholder-gray-400 text-white"
-        placeholder="Escribe tu comentario aquí..."
-      />
-
-      <button
-        class="bg-cYellow text-black py-2 px-4 rounded-full font-bold hover:bg-cYellow/80 transition-colors w-full md:max-w-max"
-      >Dejar comentario</button>
-    </form>
-
+    <ul
+      class="sandbox__carousel max-w-7xl mx-auto p-10 relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 place-items-center sm:place-items-stretch"
+    >
+      {
+        pensemosDiferente.map(item => (
+          <li class="embla__slide">
+            <a
+              class="w-full h-full"
+              href={`/books/pensemos-diferente/cap/${item.slug}`}
+            >
+              <header class="absolute top-0 left-0">
+                <img
+                  src="/user.svg"
+                  alt="puede ser la imagen de un icono de un usuario"
+                />
+              </header>
+              <img class="embla__slide__img" src={item.data.image} alt="" />
+              <footer class="absolute bottom-0 left-0 right-0 h-14 flex items-center justify-center">
+                <p class="text-center text-white font-bold">
+                  {item.data.title}
+                </p>
+              </footer>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </main>
+  <Footer />
+
+  <style>
+    .embla__slide {
+      width: 100%;
+      max-width: 350px;
+      position: relative;
+    }
+    .embla__slide__img {
+      display: block;
+      height: var(--slide-height);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    footer {
+      background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+    }
+  </style>
 </Layout>
