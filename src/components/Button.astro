@@ -1,11 +1,11 @@
 ---
 interface Props {
-  type?: 'primary' | 'secondary'
-  align: 'left' | 'center' | 'right'
+  type: 'primary' | 'secondary'
+  align: 'left' | 'center' | 'right' | 'center:md:left'
   href: string
 }
 
-const { align, href } = Astro.props
+const { align, href, type } = Astro.props
 
 const position = () => {
   switch (align) {
@@ -15,15 +15,28 @@ const position = () => {
       return 'mx-auto'
     case 'right':
       return 'ml-auto'
+    case 'center:md:left':
+      return 'md:ml-auto md:ml-0'
     default:
       return 'mx-auto'
+  }
+}
+
+const typeButton = () => {
+  switch (type) {
+    case 'primary':
+      return 'bg-black hover:bg-black/50'
+    case 'secondary':
+      return 'bg-transparent border border-white hover:bg-black/50'
+    default:
+      return 'bg-black hover:bg-black/50'
   }
 }
 ---
 
 <a
   href={href}
-  class={`bg-black hover:bg-black/50 transition-colors text-white py-3 px-5 rounded-full font-bold text-xl md:text-2xl block ${position()} w-max my-10`}
+  class={`${typeButton()} transition-colors text-white py-3 px-5 rounded-full font-bold text-xl md:text-2xl block ${position()} w-max my-10`}
 >
   <slot />
 </a>

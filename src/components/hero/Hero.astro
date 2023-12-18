@@ -4,30 +4,25 @@ import Button from '../Button.astro'
 ---
 
 <main class="bg-cYellow px-2 lg:px-0">
-  <h1 class="text-center italic font-extrabold text-5xl md:text-6xl py-10">
-    Pensemos
-    <span
-      class="text-3xl md:text-4xl flex items-center space-x-3 justify-center"
-    >
-      <span class="h-[1px] w-10 bg-black"></span>
-      <span>diferente</span>
-      <span class="h-[1px] w-10 bg-black"></span>
-    </span>
-  </h1>
+  <img class="py-10 mx-auto max-w-sm w-full" src="/logo-v2.svg" />
 
   <p class="max-w-5xl mx-auto text-center font-light text-xl md:text-2xl">
-    <strong class="font-bold"
-      >Cuando se combina la lógica y la imaginación el pensamiento es diferente.</strong
-    > Permite resolver asuntos complejos de una manera directa y creativa.
-    Aparecen soluciones distintas a las que se proponen como obvias. Este tipo
-    de pensamiento se conoce comúnmente como “pensar fuera de la caja”. Implica
-    el no seguir simplemente la tendencia predominante, sino romperla, ser
-    disruptivo. Aquí, en este espacio se presentan amenas conversaciones entre
-    conocedores de los temas sociales, económicos y políticos exponiendo
-    novedosas soluciones a problemas tradicionales.
+    Pensar diferente, o pensar “fuera de la caja” es <strong class="font-bold"
+      >hacerlo de forma no convencional, novedosa o desde una nueva perspectiva,
+      para poder resolver problemas complejos.</strong
+    >
   </p>
 
-  <Button href="#" align="center">Unirme a esta iniciativa</Button>
+  <p class="max-w-5xl mx-auto text-center font-light text-xl md:text-2xl mt-5">
+    Un ejemplo de pensamiento diferente es el ingenioso subterfugio encontrado
+    al acertijo conocido como el problema de los 9 puntos. Fue necesario que
+    alguien intentara salirse de la caja cuadrada formada por el contorno de los
+    puntos, para lograr una solución, hasta entonces tenida como imposible.
+  </p>
+
+  <Button href="#" align="center" type="primary">
+    Unirme a esta iniciativa
+  </Button>
 
   <HeroSlider />
 </main>
