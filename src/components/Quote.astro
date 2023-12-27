@@ -1,0 +1,14 @@
+---
+const props = Astro.props
+---
+
+<blockquote {...props} class="relative max-w-3xl w-full p-2 mt-5">
+  <img
+    src="/quote.svg"
+    class="relative top-0 left-0 w-8 h-8 text-gray-300"
+    aria-hidden="true"
+  />
+  <article class="pl-10 text-xl md:text-2xl lg:text-3xl italic">
+    <slot />
+  </article>
+</blockquote>

@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/BookLayout.astro'
+import BookContent from '@/components/BookContent.astro'
+import SidebarBook from '@/components/SidebarBook.astro'
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const episodeEntries = await getCollection('pais-posible', ({ data }) => data.draft !== true)
+  return episodeEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }))
+}
+
+const { entry } = Astro.props
+
+if (entry === undefined) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await entry.render()
+---
+
+<Layout title="Pais posible - Libro">
+  
+  <SidebarBook />
+
+  <BookContent>
+    <Content/>
+  </BookContent>
+</Layout>

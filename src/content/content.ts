@@ -11,6 +11,17 @@ const pensemosDiferente = defineCollection({
   })
 })
 
+const paisPosible = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    slug: z.string(),
+    draft: z.boolean(),
+    episodes: z.array(z.string())
+  })
+})
+
 export const collections = {
-  pensemosDiferente
+  pensemosDiferente,
+  paisPosible
 }

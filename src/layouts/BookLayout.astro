@@ -1,0 +1,65 @@
+---
+export interface Props {
+  title: string
+}
+
+import { GoogleFontsOptimizer } from 'astro-google-fonts-optimizer'
+import Metatags from '../components/Metatags.astro'
+import { ViewTransitions } from 'astro:transitions'
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <meta name="generator" content={Astro.generator} />
+    <Metatags />
+    <title>{title}</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <GoogleFontsOptimizer
+      url="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap"
+    />
+    <ViewTransitions />
+  </head>
+  <body class="font-inter bg-stone-100">
+    <slot />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"
+    ></script>
+  </body>
+</html>
+
+<style is:global>
+  h1, h2 {
+    @apply mt-5 font-semibold italic;
+  }
+
+  h1 {
+    @apply text-4xl text-center capitalize;
+  }
+
+  h2 {
+    @apply text-xl mb-5 uppercase text-center md:text-left;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  em {
+    @apply text-fuchsia-400 text-4xl;
+  }
+
+
+</style>
